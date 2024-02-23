@@ -1,0 +1,12 @@
+<?php
+
+$num1 = readline ("me de um numero: ");
+$num2 = readline ("me de outro numero: ");
+
+for($i=$num1; $i<=$num2 ;$i++) {
+
+    if($i % 5 == 0) {
+        printf("%d\n", $i );
+
+    }
+}
