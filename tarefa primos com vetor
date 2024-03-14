@@ -1,0 +1,29 @@
+<?php
+$numero = array();
+$pri = 0;
+
+function Primo($num, $a)
+{
+    if ($num > 2) {
+        for ($i = 2; $i < $num; $i++) {
+            if ($num % $i == 0) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+do {
+    $num = readline("Escolha um número: ");
+    if ($num > 1) {
+        $pri = Primo($num, $pri);
+        if ($pri == true) {
+            array_push($numero, $num);
+        }
+    }
+} while ($num != 0);
+echo "Os números primos são: ";
+foreach ($numero as $v) {
+    echo $v . ", ";
+}
